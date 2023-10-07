@@ -6,8 +6,8 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-    color: ${({ theme }) => theme.COLORS.GRAY_300};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900}; // fundo
+    color: ${({ theme }) => theme.COLORS.GRAY_300}; // icone
 
     margin-bottom: 8px;
     border-radius: 10px;
@@ -18,7 +18,7 @@ export const Container = styled.div`
 
         padding: 12px;
 
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        color: ${({ theme }) => theme.COLORS.BLACK}; // Texto
         background: transparent;
         border: 0;
 

@@ -17,15 +17,16 @@ export const Form = styled.form`
     align-items: center;
 
     text-align: center;
-
+    
     > h1 {
         font-size: 48px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
+        color: ${({ theme }) => theme.COLORS.AZUL_900};
     }
 
     > h2  {
         font-size: 24px;
         margin: 48px 0; //48 em cima e baixo e 0 dos lados
+        color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
 
     > p {
@@ -33,9 +34,10 @@ export const Form = styled.form`
         color: ${({ theme }) => theme.COLORS.GRAY_100};
     }
 
+    // link
     > a {
         margin-top: 124px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
+        color: ${({ theme }) => theme.COLORS.AZUL_900};
     }
 `;
 

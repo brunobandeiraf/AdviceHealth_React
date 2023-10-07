@@ -20,12 +20,13 @@ export const Form = styled.form`
 
     > h1 {
         font-size: 48px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
+        color: ${({ theme }) => theme.COLORS.AZUL_900};
     }
 
     > h2  {
         font-size: 24px;
         margin: 48px 0;
+        color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
 
     > p {
@@ -35,7 +36,7 @@ export const Form = styled.form`
 
     > a {
         margin-top: 124px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
+        color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
 `;
 

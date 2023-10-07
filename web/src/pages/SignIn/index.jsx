@@ -8,7 +8,7 @@ import { Button } from '../../components/Button'
 import { Container, Form, Background } from './styles'
 
 // Responsável pelo contexto e entendimento se usuário está logado
-//import { useAuth } from '../../hooks/auth'
+import { useAuth } from '../../hooks/auth'
 
 export function SignIn() {
 
@@ -16,19 +16,18 @@ export function SignIn() {
     const [password, setPassword] = useState("")
     
     // Passando o contexto de autenticação das rotas
-    //const { signIn }  = useAuth()
+    const { signIn }  = useAuth()
     
     const navigate = useNavigate()
     function handleSignIn(){
         signIn({email, password})
-        navigate("/home")
     }
 
     return (
         <Container>
             <Form>
-                <h1>Your Notes</h1>
-                <p>Aplicação para salvar e gerenciar seus links úteis</p>
+                <h1>Advice Health</h1>
+                <p>Aplicação para gerenciar consultas médicas</p>
 
                 <h2>Faça seu login</h2>
 

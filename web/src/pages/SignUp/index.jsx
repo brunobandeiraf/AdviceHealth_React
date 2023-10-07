@@ -50,9 +50,9 @@ export function SignUp(){
             < Background/>
             
             <Form>
-                <h1>Your Notes</h1>
-                <p>Aplicação para salvar e gerenciar seus links úteis</p>
-
+                <h1>Advice Health</h1>
+                <p>Aplicação para gerenciar consultas médicas</p>
+                
                 <h2>Crie sua conta</h2>
 
                 <Input 
