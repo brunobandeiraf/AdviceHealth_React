@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { FiMail, FiLock } from 'react-icons/fi'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { Input } from '../../components/Input'
-import { Button } from '../../components/Button'
+import { Input } from '../../components2/Input'
+import { Button } from '../../components2/Button'
 
 import { Container, Form, Background } from './styles'
 
@@ -14,13 +14,13 @@ export function SignIn() {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    
+
     // Passando o contexto de autenticação das rotas
-    const { signIn }  = useAuth()
-    
+    const { signIn } = useAuth()
+
     const navigate = useNavigate()
-    function handleSignIn(){
-        signIn({email, password})
+    function handleSignIn() {
+        signIn({ email, password })
     }
 
     return (
@@ -45,7 +45,7 @@ export function SignIn() {
                     onChange={e => setPassword(e.target.value)}
                 />
 
-                <Button title="Entrar" onClick={handleSignIn}/> 
+                <Button title="Entrar" onClick={handleSignIn} />
 
                 <Link to="/register">
                     Criar conta

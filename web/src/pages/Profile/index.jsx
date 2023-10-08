@@ -7,15 +7,15 @@ import { useAuth } from '../../hooks/auth'
 
 import { api } from '../../services/api'
 
-import { ButtonText } from "../../components/ButtonText"
+import { ButtonText } from "../../components2/ButtonText"
 import avatarPlaceHolder from '../../assets/avatar_placeholder.svg'
-import { Input } from '../../components/Input'
-import { Button } from '../../components/Button'
+import { Input } from '../../components2/Input'
+import { Button } from '../../components2/Button'
 
 import { Container, Form, Avatar } from './styles'
 
 
-export function Profile(){
+export function Profile() {
     // Usuário do contexto de autenticação
     const { user, updateProfile } = useAuth()
 
@@ -24,38 +24,38 @@ export function Profile(){
     const [passwordOld, setPasswordOld] = useState()
     const [passwordNew, setPasswordNew] = useState()
 
-    const avatarURL = user.avatar ? 
+    const avatarURL = user.avatar ?
         `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder
 
     // Começa com o avatar vindo da rota de autenticação
-    const [avatar, setAvatar] = useState(avatarURL) 
-    const [avatarFile, setAvatarFile] = useState(null) 
+    const [avatar, setAvatar] = useState(avatarURL)
+    const [avatarFile, setAvatarFile] = useState(null)
 
     const navigate = useNavigate() // Responsável por direcionar o usuário
 
-    function handleBack(){
+    function handleBack() {
         navigate(-1)
     }
 
-    async function handleUpdate(){
+    async function handleUpdate() {
         // Objeto com os dados atualizado pelo usuário
         const updated = {
-            name, 
-            email, 
+            name,
+            email,
             password: passwordNew,
             old_password: passwordOld
         }
-        
+
         // assign updated e insere em user. 
         // Verifica e os atributos que não possuem em updated, são atribuidos de user
         // Em resumo: avatar não está sendo passado no objeto anterior. Mantém o avatar
         const userUpdated = Object.assign(user, updated)
 
         // Envia para o Hooks/Auth na função para buscar a rota de update
-        await updateProfile({ user: userUpdated, avatarFile }) 
+        await updateProfile({ user: userUpdated, avatarFile })
     }
 
-    function handleChangeAvatar(event){
+    function handleChangeAvatar(event) {
         // Seleciona somente um arquivo
         const file = event.target.files[0]
         setAvatarFile(file)
@@ -68,28 +68,28 @@ export function Profile(){
         <Container>
             <header>
                 <button type="button" onClick={handleBack}>
-                    <FiArrowLeft size={24}/>
+                    <FiArrowLeft size={24} />
                 </button>
             </header>
 
             <Form>
 
                 <Avatar>
-                    <img 
+                    <img
                         src={avatar}
-                        alt="Foto do usuário" 
+                        alt="Foto do usuário"
                     />
                     <label htmlFor="avatar">
-                        <FiCamera/>
-                   
-                        <input 
+                        <FiCamera />
+
+                        <input
                             id="avatar"
                             type="file"
                             onChange={handleChangeAvatar}
-                        /> 
+                        />
                     </label>
                 </Avatar>
-                <Input 
+                <Input
                     placeholder="Nome"
                     type="text"
                     icon={FiUser}
@@ -97,7 +97,7 @@ export function Profile(){
                     onChange={e => setName(e.target.value)}
                 />
 
-                <Input 
+                <Input
                     placeholder="E-mail"
                     type="text"
                     icon={FiMail}
@@ -105,21 +105,21 @@ export function Profile(){
                     onChange={e => setEmail(e.target.value)}
                 />
 
-                <Input 
+                <Input
                     placeholder="Senha atual"
                     type="password"
                     icon={FiLock}
                     onChange={e => setPasswordOld(e.target.value)}
                 />
 
-                <Input 
+                <Input
                     placeholder="Nova senha"
                     type="password"
                     icon={FiLock}
                     onChange={e => setPasswordNew(e.target.value)}
                 />
 
-                <Button title="Salvar" onClick={ handleUpdate } />
+                <Button title="Salvar" onClick={handleUpdate} />
             </Form>
 
         </Container>
