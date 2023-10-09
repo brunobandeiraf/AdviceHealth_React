@@ -48,11 +48,11 @@ export const Menu  = styled.ul`
     }
 
     a {
-        color: ${({ theme }) => theme.COLORS.AZUL_800};
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     strong {
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
 
     // Cor gray muda no componente ButtonText
@@ -144,7 +144,7 @@ export const CardsOut = styled.div`
 `
 export const Card = styled.div`
     width: 100%;
-    background: ${({ theme }) => theme.COLORS.GRAY_100};
+    background: ${({ theme }) => theme.COLORS.AZUL_800};
     height: 100%;
 
     > header { // div > header
@@ -171,4 +171,8 @@ export const DoubleCards = styled.div`
     flex-direction: column;
     position: relative;
     gap: 15px;
+`
+
+export const Teste = styled.div`
+    background: ${({ theme }) => theme.COLORS.BLACK};
 `

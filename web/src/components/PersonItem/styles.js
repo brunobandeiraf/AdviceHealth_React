@@ -9,7 +9,7 @@ export const PersonOut = styled.div`
 export const Person = styled.div`
     width: calc(100% - 10px);
     height: 50px;
-    background: ${({ theme }) => theme.COLORS.GRAY_100};
+    background: ${({ theme }) => theme.COLORS.AZUL_800}; // cor dos elementos
     display: flex;
     gap: 10px;
     padding: 5px;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FiPlus, FiSearch } from 'react-icons/fi'
-import { Container, Brand, Menu, Content, NewScheduling, InnerCont, LeftCont, Doctors, RightCont, DefSpace, TitleDash, CardsOut, Card, DoubleCards} from './styles'
+import { Teste, Container, Brand, Menu, Content, NewScheduling, InnerCont, LeftCont, Doctors, RightCont, DefSpace, TitleDash, CardsOut, Card, DoubleCards} from './styles'
 
 // container, brand
 import { useNavigate, Link } from 'react-router-dom'
@@ -43,6 +43,27 @@ export function Home(){
 
     ]
 
+    const [eventos, setEventos] = useState([
+        { id: 1, data: '2023-10-08', descricao: 'Evento 1' },
+        { id: 2, data: '08-10-2023', descricao: 'Evento 1' },
+        { id: 3, data: '2023-10-08', descricao: 'Evento 1' },
+        { id: 4, data: '2023-10-07', descricao: 'Evento 2' },
+        { id: 5, data: '2023-10-06', descricao: 'Evento 3' },
+        { id: 6, data: '2023-10-05', descricao: 'Evento 4' },
+        // Adicione mais eventos conforme necessário
+      ]);
+      const [eventosFiltrados, setEventosFiltrados] = useState([]); 
+      // Estado para armazenar eventos filtrados
+
+      const handleDiaClicado = (dia) => {
+        // Filtra os eventos com base na data clicada
+        console.log("Dia: "+dia)
+        const eventosDoDia = eventos.filter(evento => evento.data === dia.dateString);
+        setEventosFiltrados(eventosDoDia);
+        console.log(eventosDoDia)
+      };
+
+
     return(
         <Container>
             <Brand> 
@@ -67,6 +88,33 @@ export function Home(){
             <Content>
                 <InnerCont>
                     <LeftCont>
+
+
+                        <CalendarC
+                            onDayPress={(day) => handleDiaClicado(day)}
+                            // Outras configurações do calendário, como markedDates
+                        />
+
+                        <Teste>
+                            <h1>Eventos do Dia:</h1>
+                            <ul>
+                                <li>
+                                    09/10/2023
+                                </li>
+                            {
+                                eventosFiltrados.map((evento) => (
+                                    <li key={evento.id}>
+                                        {evento.data} - {evento.descricao}
+                                    </li>
+                                ))
+                            }
+                            </ul>
+                        </Teste>
+                    
+                        
+
+
+
                         
                         <SrcBar text="Buscar" btn="Buscar"/>
                         

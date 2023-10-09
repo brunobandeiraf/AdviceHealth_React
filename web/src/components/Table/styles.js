@@ -7,7 +7,7 @@ export const ImprovisedTable = styled.div`
 export const TitlesTab = styled.div`
     display: flex;
     padding: 10px;
-    background: ${({ theme }) => theme.COLORS.GRAY_100};
+    background: ${({ theme }) => theme.COLORS.AZUL_800}; // cor tr
     color: ${({ theme }) => theme.COLORS.BLACK};
 `
 

@@ -48,11 +48,11 @@ export const Menu  = styled.ul`
     }
 
     a {
-        color: ${({ theme }) => theme.COLORS.AZUL_800};
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     strong {
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
 
     // Cor gray muda no componente ButtonText
@@ -124,7 +124,7 @@ export const TransactionsTable = styled.table`
 
     tr:first-child {// Primeiro tr
         td {
-            background: ${({ theme }) => theme.COLORS.GRAY_100};
+            background: ${({ theme }) => theme.COLORS.AZUL_800};
             color: ${({ theme }) => theme.COLORS.BLACK};
         }
 

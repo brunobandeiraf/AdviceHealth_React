@@ -48,11 +48,11 @@ export const Menu  = styled.ul`
     }
 
     a {
-        color: ${({ theme }) => theme.COLORS.AZUL_800};
+        color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     strong {
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
 
     // Cor gray muda no componente ButtonText
