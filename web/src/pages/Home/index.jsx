@@ -43,25 +43,25 @@ export function Home(){
 
     ]
 
-    const [eventos, setEventos] = useState([
-        { id: 1, data: '2023-10-08', descricao: 'Evento 1' },
-        { id: 2, data: '08-10-2023', descricao: 'Evento 1' },
-        { id: 3, data: '2023-10-08', descricao: 'Evento 1' },
-        { id: 4, data: '2023-10-07', descricao: 'Evento 2' },
-        { id: 5, data: '2023-10-06', descricao: 'Evento 3' },
-        { id: 6, data: '2023-10-05', descricao: 'Evento 4' },
-        // Adicione mais eventos conforme necessário
-      ]);
-      const [eventosFiltrados, setEventosFiltrados] = useState([]); 
-      // Estado para armazenar eventos filtrados
+    // const [eventos, setEventos] = useState([
+    //     { id: 1, data: '2023-10-08', descricao: 'Evento 1' },
+    //     { id: 2, data: '2023-10-08', descricao: 'Evento 1' },
+    //     { id: 3, data: '2023-10-08', descricao: 'Evento 1' },
+    //     { id: 4, data: '2023-10-07', descricao: 'Evento 2' },
+    //     { id: 5, data: '2023-10-06', descricao: 'Evento 3' },
+    //     { id: 6, data: '2023-10-05', descricao: 'Evento 4' },
+    //     // Adicione mais eventos conforme necessário
+    //   ]);
+    //   const [eventosFiltrados, setEventosFiltrados] = useState([]); 
+    //   // Estado para armazenar eventos filtrados
 
-      const handleDiaClicado = (dia) => {
-        // Filtra os eventos com base na data clicada
-        console.log("Dia: "+dia)
-        const eventosDoDia = eventos.filter(evento => evento.data === dia.dateString);
-        setEventosFiltrados(eventosDoDia);
-        console.log(eventosDoDia)
-      };
+    //   const handleDiaClicado = (dia) => {
+    //     // Filtra os eventos com base na data clicada
+    //     console.log("Dia: "+dia)
+    //     const eventosDoDia = eventos.filter(evento => evento.data === dia.dateString);
+    //     setEventosFiltrados(eventosDoDia);
+    //     console.log(eventosDoDia)
+    //   };
 
 
     return(
@@ -90,7 +90,8 @@ export function Home(){
                     <LeftCont>
 
 
-                        <CalendarC
+
+                        {/* <CalendarC
                             onDayPress={(day) => handleDiaClicado(day)}
                             // Outras configurações do calendário, como markedDates
                         />
@@ -109,11 +110,9 @@ export function Home(){
                                 ))
                             }
                             </ul>
-                        </Teste>
+                        </Teste> */}
                     
                         
-
-
 
                         
                         <SrcBar text="Buscar" btn="Buscar"/>
