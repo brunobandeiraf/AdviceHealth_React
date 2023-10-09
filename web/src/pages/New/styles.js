@@ -15,12 +15,6 @@ export const Container = styled.div`
         grid-area: content;
         overflow-y: auto; 
     }
-
-    .tags {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; //não caber na linha, joga pra baixo
-    }
 `;
 
 export const Form = styled.form`
@@ -31,12 +25,13 @@ export const Form = styled.form`
         display: flex;
         align-items: center;
         justify-content: space-between; // um para cada lado
+        color: ${({ theme }) => theme.COLORS.BLACK};
 
         margin-bottom: 36px;
 
         button {
             font-size: 20px;
-            color: ${({ theme }) => theme.COLORS.GRAY_100};
+            color: ${({ theme }) => theme.COLORS.BLACK};
         }
     }
 `;

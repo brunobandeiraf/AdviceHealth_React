@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FiPlus, FiSearch } from 'react-icons/fi'
-import { Teste, Container, Brand, Menu, Content, NewScheduling, InnerCont, LeftCont, Doctors, RightCont, DefSpace, TitleDash, CardsOut, Card, DoubleCards} from './styles'
+import { Container, Brand, Menu, Content, NewScheduling, InnerCont, LeftCont, Doctors, RightCont, DefSpace, TitleDash, CardsOut, Card, DoubleCards} from './styles'
 
 // container, brand
 import { useNavigate, Link } from 'react-router-dom'
@@ -63,7 +63,6 @@ export function Home(){
     //     console.log(eventosDoDia)
     //   };
 
-
     return(
         <Container>
             <Brand> 
@@ -91,7 +90,10 @@ export function Home(){
 
 
 
-                        {/* <CalendarC
+                        {/* 
+                            // Testes para capturar o dia do calendário
+
+                            <CalendarC
                             onDayPress={(day) => handleDiaClicado(day)}
                             // Outras configurações do calendário, como markedDates
                         />
@@ -112,8 +114,6 @@ export function Home(){
                             </ul>
                         </Teste> */}
                     
-                        
-
                         
                         <SrcBar text="Buscar" btn="Buscar"/>
                         

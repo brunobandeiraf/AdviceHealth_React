@@ -15,8 +15,7 @@ export const Container = styled.head`
     justify-content: space-between; // um de cada lado
 
     padding: 0 80px;
-
-    //background: red;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_BODY};  // Cor do header
 `
 
 export const Profile = styled(Link)`

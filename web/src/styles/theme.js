@@ -1,21 +1,16 @@
 export default {
     COLORS: {
       BACKGROUND_900: "#e9e6e9",
-      //BACKGROUND_900: "#232129", - - input
       BACKGROUND_800: "#F4EDE8", //branco suave
       BACKGROUND_700: "#3E3B47",
       BACKGROUND_200: "#a4eaef",
-
-
 
       // Área logada
       BACKGROUND_BODY: "#3E3B47",
       BACKGROUND_MENU: "#312E38",
 
       WHITE: "#F4EDE8",
-      //WHITE: "#F4EDE8",
       AZUL_800: "#28c2ba",
-      //ORANGE: "#FF9000", - - botao
       AZUL_900: "#205d94",
 
       GRAY_300: "#666360",

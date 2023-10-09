@@ -7,10 +7,9 @@ import { useAuth } from '../../hooks/auth'
 
 import { api } from '../../services/api'
 
-import { ButtonText } from "../../components2/ButtonText"
 import avatarPlaceHolder from '../../assets/avatar_placeholder.svg'
-import { Input } from '../../components2/Input'
-import { Button } from '../../components2/Button'
+import { Input } from '../../components/Input'
+import { Button } from '../../components/Button'
 
 import { Container, Form, Avatar } from './styles'
 
