@@ -1,10 +1,17 @@
 import { OutSrc, InputBar, Lupa} from './styles'
 
-export function SrcBar(){
+export function SrcBar({ text, btn }){
+
+    const executarFuncao = () => {
+        // Chama a função passada como parâmetro
+        props.handleInputChange();
+    };
+
+
     return (
         <OutSrc>
-            <InputBar placeholder="BUSCAR"/>
-            <Lupa>Buscar</Lupa>
+            <InputBar placeholder={text} onChange={executarFuncao} />
+            <Lupa>{btn}</Lupa>
         </OutSrc>
     )
 }

@@ -125,50 +125,46 @@ export const RightCont = styled.div`
     // Cor de fundo menu da direita
     background-color: ${({ theme }) => theme.COLORS.GRAY_50};
 `
-export const DefSpace = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-`
-export const TitleDash = styled.h1`
+
+export const Title = styled.h1`
+    //width: calc(55% - 40px);
+    //padding: 20px;
+
     font-size: 18px;
+    //font-weight: bold;
     color: ${({ theme }) => theme.COLORS.BLACK};
-    font-weight: bold;
 `
-export const CardsOut = styled.div`
-    width: 100%;
+
+export const TimeAdd = styled.div`
+    background: ${({ theme }) => theme.COLORS.GREY_50};
+
+    overflow: scroll; /* Habilita a rolagem */
+
+`
+
+export const TimeIn = styled.div`
+    height: 45px;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    margin: 10px 0;
+    border-radius: 2px;
     display: flex;
-    gap: 15px;
-    height: 200px;
+    align-items: center;
+    padding: 10px;
     position: relative;
-`
-export const Card = styled.div`
-    width: 100%;
-    background: ${({ theme }) => theme.COLORS.GRAY_100};
-    height: 100%;
 
-    > header { // div > header
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: ${({ theme }) => theme.COLORS.BLACK};
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-    > strong {
-        display: block;
-        margin-top: 1rem;
-        font-size: 2rem;
-        margin-left: 10px;
-    }
-
+    color: ${({ theme }) => theme.COLORS.BLACK};
 `
 
-export const DoubleCards = styled.div`
-    width: 100%;
+export const Symbol = styled.div`
+    width: 20px;
+    color: white;
+    aspect-ratio: 1;
+    background: ${({ theme }) => theme.COLORS.AZUL_900};
+    border-radius: 100%;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 `

@@ -8,10 +8,13 @@ export const CalendarCont = styled.div`
     padding: 10px;
     border-radius: 3px;
 
+    //color:  ${({ theme }) => theme.COLORS.BLACK}; 
+
   /* ~~~ navigation styles ~~~ */
   .react-calendar__navigation {
     display: flex;
     gap: 5px;
+
 
     .react-calendar__navigation__label {
       font-weight: bold;
@@ -29,7 +32,7 @@ export const CalendarCont = styled.div`
 
   /* ~~~ button styles ~~~ */
   abbr{
-    color: white;
+    color:  ${({ theme }) => theme.COLORS.BLACK}; 
   }
 
   button {
@@ -42,11 +45,11 @@ export const CalendarCont = styled.div`
     font-size: 15px;
 
     &:hover {
-      background-color: ${({ theme }) => theme.COLORS.GRAY_200};
+      background-color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
 
     &:active {
-      background-color: ${({ theme }) => theme.COLORS.GRAY_300};
+      background-color: ${({ theme }) => theme.COLORS.AZUL_800};
     }
   }
 `
@@ -54,5 +57,10 @@ export const CalendarCont = styled.div`
 export const CalendarConf = styled.div`
     width: 100%;
     height: 300px;
-    background: ${({ theme }) => theme.COLORS.AZUL_800};
+    background:  ${({ theme }) => theme.COLORS.GRAY_50};
+    //color: ${({ theme }) => theme.COLORS.BLACK};
 `
+
+const CustomTile = styled.div`
+  color: black; /* Altera a cor do texto para preto */
+`;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FiPlus, FiSearch } from 'react-icons/fi'
-import { Container, Brand, Menu, Content, NewScheduling, InnerCont, LeftCont, RightCont, DefSpace, TitleDash, CardsOut, Card, DoubleCards} from './styles'
+import { Container, Brand, Menu, Content, NewScheduling, InnerCont, LeftCont, Doctors, RightCont, DefSpace, TitleDash, CardsOut, Card, DoubleCards} from './styles'
 
 // container, brand
 import { useNavigate, Link } from 'react-router-dom'
@@ -15,6 +15,33 @@ export function Home(){
 
     const navigate = useNavigate()
 
+    const doctors = [
+        {
+            name: "Dra. Ana Maria",
+            specialty: "Ortopedista"
+        },
+        {
+            name: "Dr. Breno Souza",
+            specialty: "Clínico Geral"
+        },
+        {
+            name: "Dr. Carlos Amaral",
+            specialty: "Ginecologista"
+        },
+        {
+            name: "Dr. Daniel Gonzaga",
+            specialty: "Pediatra"
+        },
+        {
+            name: "Dra. Heloisa Rodolfo",
+            specialty: "Ginecologista"
+        },
+        {
+            name: "Dr. Jesus Eith",
+            specialty: "Cardiologista"
+        },
+
+    ]
 
     return(
         <Container>
@@ -26,13 +53,13 @@ export function Home(){
 
             <Menu>
                 <li>
-                    <Link to="/new">Home</Link>
+                    <Link to="/"><strong>Home</strong></Link>
                 </li>
                 <li>
-                    <Link to="/new">Agendamento</Link>
+                    <Link to="/schedule">Agendamento</Link>
                 </li>
                 <li>
-                    <Link to="/new">Consultas</Link>
+                    <Link to="/appointment">Consultas</Link>
                 </li>
                 
             </Menu>
@@ -41,13 +68,22 @@ export function Home(){
                 <InnerCont>
                     <LeftCont>
                         
-                        <SrcBar/>
+                        <SrcBar text="Buscar" btn="Buscar"/>
                         
                         <DefSpace>
                             <TitleDash>DASHBOARD</TitleDash>
 
                             <CardsOut>
-                                <Card/>
+                                <Card>
+                                    <header>
+                                        <span>Colaboradores:</span>
+                                    </header>
+                                    <strong>1.120</strong>
+                                    <header>
+                                        <span>Pacientes:</span>
+                                    </header>
+                                    <strong>1.720</strong>
+                                </Card>
                                 <DoubleCards>
                                     <Card>
                                         <header>
@@ -73,14 +109,15 @@ export function Home(){
 
                     <RightCont>
                         <CalendarC/>
-                        <PersonItem name="Ana Maria" information="Ortopedista"></PersonItem>
-                        <PersonItem name="Breno Souza" information="Pediatra"></PersonItem>
-                        <PersonItem name="Carlos Amaral" information="Clínico Geral"></PersonItem>
-                        <PersonItem name="Daniel Gonzaga" information="Ginecologista"></PersonItem>
+                        <Doctors>
+                            {
+                                doctors.map((e, i) => {
+                                    return <PersonItem key={i} name={e.name} information={e.specialty}/>
+                                })
+                            }
+                        </Doctors>
                     </RightCont>
                 </InnerCont>
-
-
             </Content>
 
           

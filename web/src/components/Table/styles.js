@@ -7,7 +7,7 @@ export const ImprovisedTable = styled.div`
 export const TitlesTab = styled.div`
     display: flex;
     padding: 10px;
-    background: ${({ theme }) => theme.COLORS.AZUL_800};
+    background: ${({ theme }) => theme.COLORS.GRAY_100};
     color: ${({ theme }) => theme.COLORS.BLACK};
 `
 
@@ -23,5 +23,6 @@ export const TableContent = styled.div`
     display: flex;
     padding: 10px;
     background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-    color: ${({ theme }) => theme.COLORS.BLACK};
+    //color: ${({ theme }) => theme.COLORS.BLACK};
+    color: ${(props) => (props.checked ? 'gray' : 'black')};
 `

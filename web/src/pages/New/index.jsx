@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { Textarea } from '../../components2/Textarea'
+import { Textarea } from '../../components/Textarea'
 import { NoteItem } from '../../components2/NoteItem'
 import { Section } from '../../components2/Section'
 import { Button } from '../../components2/Button'

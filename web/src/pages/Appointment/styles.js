@@ -87,88 +87,84 @@ export const NewScheduling = styled(Link)`
 
 export const InnerCont = styled.div`
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
+    //align-items: center;
+    //gap: 20px;
+    //justify-content: space-between;
     height: 100%;
-`
-
-export const LeftCont = styled.div`
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    overflow-y: scroll;
-    height: calc(100% - 40px);
-    padding: 20px;
-`
-
-export const Doctors = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-y: scroll;
-    height: calc(100% - 40px);
     padding: 20px;
 
-    overflow: scroll; /* Habilita a rolagem */
+    //background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 `
 
-export const RightCont = styled.div`
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    overflow-y: scroll;
-    height: calc(100% - 40px);
-    padding: 20px;
-    // Cor de fundo menu da direita
-    background-color: ${({ theme }) => theme.COLORS.GRAY_50};
-`
 export const DefSpace = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 20px;
 `
-export const TitleDash = styled.h1`
-    font-size: 18px;
+
+export const TransactionsContainer = styled.main`
+    width: 100%;
+    //max-width: 1120px;
+    //margin: 4rem auto 0;
+    padding: 0 1.5rem;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    overflow-y: scroll;
+`;
+
+export const TransactionsTable = styled.table`
+    width: 100%;
+    border-collapse: separate; // Separação entre as linhas 
+    border-spacing: 0 0.5rem; // Libera após o uso do collapse
+    margin-top: 1.5rem;
+
+    
     color: ${({ theme }) => theme.COLORS.BLACK};
-    font-weight: bold;
-`
-export const CardsOut = styled.div`
-    width: 100%;
-    display: flex;
-    gap: 15px;
-    height: 200px;
-    position: relative;
-`
-export const Card = styled.div`
-    width: 100%;
-    background: ${({ theme }) => theme.COLORS.GRAY_100};
-    height: 100%;
 
-    > header { // div > header
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: ${({ theme }) => theme.COLORS.BLACK};
-        margin-top: 10px;
-        margin-left: 10px;
+    tr:first-child {// Primeiro tr
+        td {
+            background: ${({ theme }) => theme.COLORS.GRAY_100};
+            color: ${({ theme }) => theme.COLORS.BLACK};
+        }
+
     }
 
-    > strong {
-        display: block;
-        margin-top: 1rem;
-        font-size: 2rem;
-        margin-left: 10px;
-    }
+    td {
+        padding: 1.25rem 2rem;
+        background: ${({ theme }) => theme.COLORS.WHITE};
+        
+        &:first-child { // Primeira td
+            background: ${({ theme }) => theme.COLORS.WHITE};
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
 
+        &:last-child { // Último td
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+    }
+`;
+
+export const Symbol = styled.div`
+    width: 20px;
+    color: white;
+    aspect-ratio: 1;
+    background: ${({ theme }) => theme.COLORS.AZUL_900};
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 `
 
-export const DoubleCards = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 15px;
+export const Input = styled.input`
+    width: calc(100% - 30px);
+    background: ${({ theme }) => theme.COLORS.GREY_100};
+    height: 30px;
+    padding: 10px 15px;
+    color: ${({ theme }) => theme.COLORS.BLACK};
 `

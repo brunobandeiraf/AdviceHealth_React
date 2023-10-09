@@ -4,8 +4,7 @@ export const OutSrc = styled.div`
     position: relative;
     width: 100%;
     max-width: 500px;
-
-
+    height: 30px;
 `
 
 export const InputBar = styled.input`
