@@ -2,7 +2,7 @@
 
 Essa pasta apresenta alguns dos diagramas desenvolvidos como suporte para diagramação das funcionalidades da aplicação. 
 
-## 🛠 Stack utilizada
+## 🛠 Documentação
 * `Lista de Requisitos Funcionais` 
 * `Diagrama de Caso de Uso`
 * `Diagrama de Classe`
