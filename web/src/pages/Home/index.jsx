@@ -114,8 +114,8 @@ export function Home(){
                             </ul>
                         </Teste> */}
                     
-                        
-                        <SrcBar text="Buscar" btn="Buscar"/>
+
+                        <SrcBar text="Buscar" btn="Buscar" />
                         
                         <DefSpace>
                             <TitleDash>DASHBOARD</TitleDash>

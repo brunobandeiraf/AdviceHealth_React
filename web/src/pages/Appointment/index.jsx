@@ -83,16 +83,16 @@ export function Appointment(){
     // Inicialmente, os itens filtrados são os mesmos que os originais
 
     // Função para atualizar o array filtrado com base no texto de pesquisa
-    const atualizarItensFiltrados = (textoPesquisa) => {
-        const novosItensFiltrados = appointments.filter(
-            item => item.doctor.toLowerCase().includes(textoPesquisa.toLowerCase())
+    const updateItensFiltrados = (textSearch) => {
+        const newItensFiltrados = appointments.filter(
+            item => item.doctor.toLowerCase().includes(textSearch.toLowerCase())
         );
-        setItensFiltrados(novosItensFiltrados);
+        setItensFiltrados(newItensFiltrados);
     };
 
     const handleInputChange = (e) => {
-        const textoPesquisa = e.target.value;
-        atualizarItensFiltrados(textoPesquisa);
+        const textSearch = e.target.value;
+        updateItensFiltrados(textSearch);
     };
 
     return(
@@ -120,16 +120,17 @@ export function Appointment(){
                 <InnerCont>
                     
                     <TransactionsContainer>
-                        {/* <SrcBar 
+                        <SrcBar 
                             text="Pesquisar médico" 
                             btn="Buscar"
-                            executarFuncao={handleInputChange}
-                        /> */}
-                        <Input
+                            func={handleInputChange}
+                        /> 
+
+                        {/* <Input
                             type="text"
                             placeholder="Pesquisar médico..."
                             onChange={handleInputChange}
-                        />
+                        />  */}
                         <TransactionsTable>
                             <tbody>
                                 <tr>
